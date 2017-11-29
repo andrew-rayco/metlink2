@@ -1,6 +1,5 @@
 import BaseController from './base.controller';
-import Constants from '../config/constants';
-import request from 'superagent'
+import request from 'superagent';
 
 class MetaController extends BaseController {
   index(req, res) {
@@ -8,16 +7,11 @@ class MetaController extends BaseController {
       .get('https://www.metlink.org.nz/api/v1/ServiceLocation/14')
       .end((err, result) => {
         if (err) {
-          result.send('Oh no! Error:')
+          result.send('Oh no! Error:');
         } else {
-          console.log(Object.keys(result))
-          res.send(result.body)
+          res.send(result.body);
         }
-      })
-		// res.json({
-		// 	version: Constants.version,
-		// });
-
+      });
 	}
 }
 
