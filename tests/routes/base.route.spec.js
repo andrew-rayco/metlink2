@@ -15,11 +15,11 @@ describe('GET /', () => {
         });
     });
 
-    it('should return the API version', (done) => {
+    it('should return metlink data', (done) => {
       server.get('/')
         .end((err, res) => {
           expect(res).to.have.status(200);
-          expect(res.body.version).to.eql(constants.version);
+          expect(res.body.LastModified).to.include('20');
           done();
         });
     });

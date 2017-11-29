@@ -4,7 +4,7 @@ import request from 'superagent';
 class MetaController extends BaseController {
   index(req, res) {
     request
-      .get('https://www.metlink.org.nz/api/v1/ServiceLocation/14')
+      .get('https://www.metlink.org.nz/api/v1/StopDepartures/4125')
       .end((err, result) => {
         if (err) {
           result.send('Oh no! Error:');
