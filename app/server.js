@@ -12,7 +12,7 @@ const app = express();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jsx');
-app.engine('jsx', require('express-react-views').createEngine())
+app.engine('jsx', require('express-react-views').createEngine());
 
 // Helmet helps you secure your Express apps by setting various HTTP headers
 // https://github.com/helmetjs/helmet

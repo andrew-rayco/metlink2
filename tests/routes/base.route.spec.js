@@ -6,11 +6,11 @@ const expect = chai.expect;
 
 describe('GET /', () => {
   describe('#200', () => {
-    it('should return json', (done) => {
+    it('should return html', (done) => {
       server.get('/')
         .end((err, res) => {
           expect(res).to.have.status(200);
-          expect(res.type).to.eql('application/json');
+          expect(res.type).to.eql('text/html');
           done();
         });
     });
@@ -19,7 +19,7 @@ describe('GET /', () => {
       server.get('/')
         .end((err, res) => {
           expect(res).to.have.status(200);
-          expect(res.body.LastModified).to.include('20');
+          expect(res.text).to.include('Wadestown');
           done();
         });
     });
