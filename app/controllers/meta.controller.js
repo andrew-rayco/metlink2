@@ -9,7 +9,7 @@ class MetaController extends BaseController {
         if (err) {
           result.send('Oh no! Error:');
         } else {
-          res.send(result.body);
+          res.render('Home', result.body);
         }
       });
 	}
